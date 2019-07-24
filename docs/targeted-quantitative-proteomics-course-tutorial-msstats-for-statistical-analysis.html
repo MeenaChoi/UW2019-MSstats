@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>UW 2019: MSstats for statistical analysis</title>
+  <meta name="description" content="UW 2019: MSstats for statistical analysis" />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="UW 2019: MSstats for statistical analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="UW 2019: MSstats for statistical analysis" />
+  
+  
+  
+
+<meta name="author" content="Meena Choi" />
+
+
+<meta name="date" content="2019-07-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path=""><a href="#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#license"><i class="fa fa-check"></i>License</a></li>
+<li class="chapter" data-level="1" data-path="uw2019-msstats.html"><a href="#targeted-quantitative-proteomics-course-tutorial-msstats-for-statistical-analysis"><i class="fa fa-check"></i><b>1</b> 2019 Targeted Quantitative Proteomics Course Tutorial: MSstats for statistical analysis</a><ul>
+<li class="chapter" data-level="1.1" data-path="uw2019-msstats.html"><a href="#introduction-to-data-and-preprocessing"><i class="fa fa-check"></i><b>1.1</b> introduction to data and preprocessing</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="uw2019-msstats.html"><a href="#prerequisites"><i class="fa fa-check"></i><b>1.1.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="1.1.2" data-path="uw2019-msstats.html"><a href="#workflow-in-msstats"><i class="fa fa-check"></i><b>1.1.2</b> Workflow in MSstats</a></li>
+<li class="chapter" data-level="1.1.3" data-path="uw2019-msstats.html"><a href="#data-need-to-update"><i class="fa fa-check"></i><b>1.1.3</b> Data : need to update</a></li>
+<li class="chapter" data-level="1.1.4" data-path="uw2019-msstats.html"><a href="#load-msstats"><i class="fa fa-check"></i><b>1.1.4</b> Load MSstats</a></li>
+<li class="chapter" data-level="1.1.5" data-path="uw2019-msstats.html"><a href="#allowable-data-formats"><i class="fa fa-check"></i><b>1.1.5</b> Allowable data formats</a></li>
+<li class="chapter" data-level="1.1.6" data-path="uw2019-msstats.html"><a href="#preparing-the-data-for-msstats-input"><i class="fa fa-check"></i><b>1.1.6</b> Preparing the data for MSstats input</a></li>
+<li class="chapter" data-level="1.1.7" data-path="uw2019-msstats.html"><a href="#convert-to-msstats-required-format-data-cleaning"><i class="fa fa-check"></i><b>1.1.7</b> Convert to MSstats required format (Data cleaning)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="uw2019-msstats.html"><a href="#data-processing---normalization-and-run-summarization"><i class="fa fa-check"></i><b>1.2</b> Data processing - Normalization and run summarization</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">UW 2019: MSstats for statistical analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">UW 2019: MSstats for statistical analysis</h1>
+<p class="author"><em>Meena Choi</em></p>
+<p class="date"><em>2019-07-24</em></p>
+</div>
+<div id="targeted-quantitative-proteomics-course-tutorial-msstats-for-statistical-analysis" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> 2019 Targeted Quantitative Proteomics Course Tutorial: MSstats for statistical analysis</h1>
+<div id="introduction-to-data-and-preprocessing" class="section level2">
+<h2><span class="header-section-number">1.1</span> introduction to data and preprocessing</h2>
+<div id="prerequisites" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Prerequisites</h3>
+<p>MSstats is an R package and therefore requires a previously installed version of R (&gt;=3.6.0). If you haven’t previously installed MSstats through Skyline then follow the instructions below.
+Go to The R CRAN website and download R (vesion 3.6.0 or higher for MSstats 3.16.0) for your OS, install R and open an R console. MSstats itself depends on a number of other R packages, which need to be installed as well. These packages can be installed from CRAN and Bioconductor package repositories. Try executing the following commands in the R console. Click YES when you are asked to create a personal library and type a if you are asked to update all/some/none packages.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="kw">c</span>(<span class="st">&quot;gplots&quot;</span>,<span class="st">&quot;lme4&quot;</span>,<span class="st">&quot;ggplot2&quot;</span>,<span class="st">&quot;ggrepel&quot;</span>,<span class="st">&quot;reshape&quot;</span>,<span class="st">&quot;reshape2&quot;</span>, <span class="st">&quot;data.table&quot;</span>,<span class="st">&quot;Rcpp&quot;</span>,<span class="st">&quot;survival&quot;</span>,<span class="st">&quot;minpack.lm&quot;</span>))</code></pre>
+<p>Now install all the packages we need for MSstats from the Bioconductor repository using biocLite(): ! If you are prompted to “Update all/some/none?” Press “a”</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))
+    <span class="kw">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)
+BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&quot;MSstats&quot;</span>)</code></pre>
+<hr />
+</div>
+<div id="workflow-in-msstats" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Workflow in MSstats</h3>
+<p><img src="img/MSstats_intro1.png" /></p>
+<p><img src="img/MSstats_intro2.png" />
+<img src="img/MSstats_intro3.png" /></p>
+<hr />
+</div>
+<div id="data-need-to-update" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Data : need to update</h3>
+<ul>
+<li>the quantified peak intensities data from ABRF 2015, processed by Skyline.</li>
+</ul>
+<div class="figure">
+<img src="img/Protein_sample_information.png" alt="Summary of the ABRF 2015 study design, Choi, et al. J Proteome Res. 2017" style="width:70.0%" />
+<p class="caption">Summary of the ABRF 2015 study design, Choi, et al. J Proteome Res. 2017</p>
+</div>
+<hr />
+</div>
+<div id="load-msstats" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Load MSstats</h3>
+<p>Once you have the package installed, load MSstats into an R session and have a look at the documentation by using the question mark ?. Note that in order to use MSstats, the package needs to be loaded every time you restart R.</p>
+<p>Load MSstats first. Then you are ready to start MSstats.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(MSstats)
+?MSstats</code></pre>
+<hr />
+</div>
+<div id="allowable-data-formats" class="section level3">
+<h3><span class="header-section-number">1.1.5</span> Allowable data formats</h3>
+<p><code>MSstats</code> performs statistical analysis steps, that follow peak identification and quantitation. Therefore, input
+to MSstats is the output of other software tools (such as <code>Skyline</code>, <code>MaxQuant</code> and so on) that read raw spectral files
+, identify and quantify spectral peaks. The preferred structure of data for use in MSstats is a .csv file
+in a <em>long</em> format with at least 10 columns representing the following variables: <strong>ProteinName</strong>, <strong>PeptideSequence</strong>, <strong>PrecursorCharge</strong>, <strong>FragmentIon</strong>, <strong>ProductCharge</strong>, <strong>IsotopeLabelType</strong>, <strong>Condition</strong>, <strong>BioReplicate</strong>, <strong>Run</strong>, <strong>Intensity</strong>. The variable names are fixed, but are case-insensitive.</p>
+<pre><code>##   ProteinName PeptideSequence PrecursorCharge FragmentIon ProductCharge
+## 1      bovine     S.PVDIDTK_5               5          NA            NA
+## 2      bovine     S.PVDIDTK_5               5          NA            NA
+## 3      bovine     S.PVDIDTK_5               5          NA            NA
+## 4      bovine     S.PVDIDTK_5               5          NA            NA
+## 5      bovine     S.PVDIDTK_5               5          NA            NA
+## 6      bovine     S.PVDIDTK_5               5          NA            NA
+##   IsotopeLabelType Condition BioReplicate Run Intensity
+## 1                L        C1            1   1   2636792
+## 2                L        C1            1   2   1992418
+## 3                L        C1            1   3   1982146
+## 4                L        C2            1   4   5019594
+## 5                L        C2            1   5   4560468
+## 6                L        C2            1   6   3627849</code></pre>
+<hr />
+</div>
+<div id="preparing-the-data-for-msstats-input" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> Preparing the data for MSstats input</h3>
+<p>In skyline, go to <strong>File</strong> &gt; <strong>Export</strong> &gt; <strong>Report…</strong> &gt; select <strong>MSstats Input</strong> &gt; click <strong>Export</strong> &gt; choose folder and save the file as <strong>MSstats_Input.csv</strong> &gt; click <strong>Save</strong></p>
+<p>Create an RStudio project in the folder where you saved the file exported from Skyline. From the menu, select <strong>File</strong> &gt; <strong>New Project…</strong>, then select <strong>Existing Directory</strong> and choose the directory where you downloaded this script and the example datasets for this tutorial. All the output files we’ll be creating in this tutorial will be saved in the ‘working directory’ that now has been set by RStudio.</p>
+<p><strong>note : add captue</strong></p>
+<p>Check where you are using <strong>getwd()</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre>
+<pre><code>## [1] &quot;/Users/meenachoi/Dropbox/visits/2019/07_UW/MSstats-handson&quot;</code></pre>
+<hr />
+</div>
+<div id="convert-to-msstats-required-format-data-cleaning" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> Convert to MSstats required format (Data cleaning)</h3>
+<hr />
+<p>Let’s start preprocessing steps to make required input format for MSstats from output from diverse output of spectral processing tools.</p>
+<p><img src="img/MSstats_intro4.png" /></p>
+<ul>
+<li><p>Data input support for various data acquisition methods : DDA, DIA, SRM</p></li>
+<li><p>Interoperability with existing computational tools :
+- Converter functions for 7 data processin tools :
+<code>SkylinetoMSstatsFormat</code>, <code>MaxQtoMSstatsFormat</code>, <code>OpenMStoMSstatsFormat</code>, <code>ProgenesistoMSstatsFormat</code>, <code>PDtoMSstatsFormat</code>, <code>SpectronauttoMSstatsFormat</code>, <code>OpenSWATHtoMSstatsFormat</code>, <code>DIAUmpiretoMSstatsFormat</code>
+- Consistent data cleaning steps across converter functions : filter multiple measurements, shared peptides, etc.
+- Generate the same format of data from diverse type of data format.</p></li>
+</ul>
+<div id="read-data" class="section level4">
+<h4><span class="header-section-number">1.1.7.1</span> Read data</h4>
+<p>Then, read in data as it comes out of Skyline.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Read output from skyline </span>
+raw &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;data/MSstats_Input.csv&#39;</span>)</code></pre>
+<p>Use head() function to display the first few (6) rows of the data, and colnames() to see what the columns are. They should match the columns we previewed in Skyline.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(raw)</code></pre>
+<pre><code>##   Protein.Name Peptide.Modified.Sequence Precursor.Charge Fragment.Ion
+## 1    NP_036629      C[+57]SLPRPWALTFSYGR                2          y10
+## 2    NP_036629      C[+57]SLPRPWALTFSYGR                2          y10
+## 3    NP_036629      C[+57]SLPRPWALTFSYGR                2          y10
+## 4    NP_036629      C[+57]SLPRPWALTFSYGR                2          y10
+## 5    NP_036629      C[+57]SLPRPWALTFSYGR                2          y10
+## 6    NP_036629      C[+57]SLPRPWALTFSYGR                2          y10
+##   Product.Charge Isotope.Label.Type Condition BioReplicate      File.Name
+## 1              1              light  Diseased          102 D_102_REP1.raw
+## 2              1              light  Diseased          102 D_102_REP2.raw
+## 3              1              light  Diseased          102 D_102_REP3.raw
+## 4              1              light  Diseased          103 D_103_REP1.raw
+## 5              1              light  Diseased          103 D_103_REP2.raw
+## 6              1              light  Diseased          103 D_103_REP3.raw
+##    Area Standard.Type Truncated
+## 1 14516                   False
+## 2  9607                   False
+## 3  7480                   False
+## 4  5692                   False
+## 5  5953                   False
+## 6   646                    True</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(raw)</code></pre>
+<pre><code>##  [1] &quot;Protein.Name&quot;              &quot;Peptide.Modified.Sequence&quot;
+##  [3] &quot;Precursor.Charge&quot;          &quot;Fragment.Ion&quot;             
+##  [5] &quot;Product.Charge&quot;            &quot;Isotope.Label.Type&quot;       
+##  [7] &quot;Condition&quot;                 &quot;BioReplicate&quot;             
+##  [9] &quot;File.Name&quot;                 &quot;Area&quot;                     
+## [11] &quot;Standard.Type&quot;             &quot;Truncated&quot;</code></pre>
+<p>Use another useful function str(), to display a summary of each column in our raw dataframe.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(raw)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    30282 obs. of  12 variables:
+##  $ Protein.Name             : Factor w/ 48 levels &quot;NP_001007697&quot;,..: 11 11 11 11 11 11 11 11 11 11 ...
+##  $ Peptide.Modified.Sequence: Factor w/ 125 levels &quot;AAPITQYLK&quot;,&quot;AAVFNHFISDGVK&quot;,..: 21 21 21 21 21 21 21 21 21 21 ...
+##  $ Precursor.Charge         : int  2 2 2 2 2 2 2 2 2 2 ...
+##  $ Fragment.Ion             : Factor w/ 11 levels &quot;y10&quot;,&quot;y11&quot;,&quot;y12&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Product.Charge           : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ Isotope.Label.Type       : Factor w/ 1 level &quot;light&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Condition                : Factor w/ 2 levels &quot;Diseased&quot;,&quot;Healthy&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ BioReplicate             : int  102 102 102 103 103 103 108 108 108 138 ...
+##  $ File.Name                : Factor w/ 42 levels &quot;D_102_REP1.raw&quot;,..: 1 2 3 4 5 6 7 8 9 10 ...
+##  $ Area                     : Factor w/ 26510 levels &quot;#N/A&quot;,&quot;0&quot;,&quot;1&quot;,..: 4281 26072 23283 20209 20696 21635 577 15975 13454 26305 ...
+##  $ Standard.Type            : Factor w/ 2 levels &quot;&quot;,&quot;Global Standard&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Truncated                : Factor w/ 3 levels &quot;&quot;,&quot;False&quot;,&quot;True&quot;: 2 2 2 2 2 3 2 3 2 2 ...</code></pre>
+<p>Notice that some rows are type “Factor” and some rows are type “int”. Although we will avoid any object type conflicts in this tutorial, you can learn more about object types through the R Documentation ?typeof(). For now, it’s enough to just acknowledge that they exist!</p>
+<p>There are some column named differently than required input. The information for <code>Condition</code> and <code>BioReplicate</code> is missing. Let’s do preliminary check for this input.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># total number of unique protein name</span>
+<span class="kw">length</span>(<span class="kw">unique</span>(raw<span class="op">$</span>Protein))</code></pre>
+<pre><code>## [1] 48</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># several isotopic peaks for peptide charge</span>
+<span class="kw">unique</span>(raw<span class="op">$</span>FragmentIon)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># unique FileName, which is MS run.</span>
+<span class="kw">unique</span>(raw<span class="op">$</span>FileName)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># &#39;Truncated&#39; column</span>
+<span class="kw">unique</span>(raw<span class="op">$</span>Truncated)</code></pre>
+<pre><code>## [1] False True       
+## Levels:  False True</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># count table for &#39;Truncated&#39; column</span>
+<span class="kw">xtabs</span>(<span class="op">~</span>Truncated, raw)</code></pre>
+<pre><code>## Truncated
+##       False  True 
+##   251 29306   725</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># count which &#39;Truncated&#39; is &#39;True&#39;</span>
+<span class="kw">sum</span>(raw<span class="op">$</span>Truncated <span class="op">==</span><span class="st"> &#39;True&#39;</span>)</code></pre>
+<pre><code>## [1] 725</code></pre>
+<div id="common-mistake-for-annotation-file-incorrect-bioreplicate-information" class="section level5">
+<h5><span class="header-section-number">1.1.7.1.1</span> Common mistake for annotation file : Incorrect <code>BioReplicate</code> information</h5>
+<p><code>MSstats</code> distinguish the design of experiment as group comparison, time course, paired design, with the combination of <code>Condition</code>, <code>BioReplicate</code>, and <code>Run</code>.</p>
+</div>
+<div id="group-comparison" class="section level5">
+<h5><span class="header-section-number">1.1.7.1.2</span> Group comparison</h5>
+<p><img src="img/expdesign_group.png" style="width:40.0%" /></p>
+<p>In a group comparison design, the conditions (e.g., disease states) are profiled across <strong>non-overlapping sets of biological replicates (i.e., subjects)</strong>. In this example there are 2 conditions, Disease and Control (in general the number of conditions can vary). There are 3 subjects (i.e., biological replicates) per condition (in general an equal number of replicates per condition is not required). Overall, in this example there are 2 × 3 = 6 mass spectrometry runs.</p>
+<p>The most important is that 1) subject IDs for disease group are completely different thatn subject IDs for control group 2) <code>Run</code> is not order of spectral acquisition, but just unique MS run ID.</p>
+<p><img src="img/expdesign_group_tech.png" /></p>
+<p>In addition, if each subject has e technical replicate runs (in general technical replicates are not required, and their number per sample may vary). there are 2 × 3 × 3 = 18 mass spectrometry runs.</p>
+</div>
+<div id="time-course" class="section level5">
+<h5><span class="header-section-number">1.1.7.1.3</span> Time course</h5>
+<p>The important feature of a time course experimental design is that <strong>a same subject (i.e., biological replicate) is repetitively measured across multiple time points</strong>. In this example there are 3 time points, Time1, Time2, and Time3 (in general the number of times can vary). There are 3 subjects (i.e., biological replicates) measured across times (in general an equal number of times per replicate is not required). There are no technical replicates (in general the number of technical replicates per sample may vary). Overall, in this example there are 3 × 3 = 9 mass spectrometry runs.</p>
+<p><img src="img/expdesign_time.png" style="width:60.0%" /></p>
+</div>
+<div id="paired-design" class="section level5">
+<h5><span class="header-section-number">1.1.7.1.4</span> Paired design</h5>
+<p>Another frequently used experimental design is a <em>paired design</em>, where measurements from <strong>multiple conditions (such as healthy biopsy and disease biopsy) are taken from a same subject</strong>. The statistical model for this experimental design is the same as in the time course experiment, however the values in the columns of the input data may have a different appearence. In this example there are 3 subjects (in general the number of patients can vary). There are three conditions per subject (in general the number of conditions per subject can exceed two). Overall, in this example there are <span class="math inline">\(2 \times 3 = 6\)</span> mass spectrometry runs. <code>BioReplicate</code> should indicate each individual ID.</p>
+<p><img src="img/expdesign_pair.png" style="width:60.0%" /></p>
+</div>
+</div>
+<div id="preprocessing-with-skylinetomsstatsformat" class="section level4">
+<h4><span class="header-section-number">1.1.7.2</span> Preprocessing with <code>SkylinetoMSstatsFormat</code></h4>
+<p>Now we’ll adapt the column scheme of the dataset so that it fits MSstats input format. The SkylinetoMSstatsFormat() function helps pre-processing for making the Skyline export play nicely with MSstats functions. For example, it removes iRT peptides, renames some column name, and replaces truncated peak intensities with NA.</p>
+<p>The input data for <code>MSstats</code> is required to contain variables of <strong>ProteinName</strong>, <strong>PeptideSequence</strong>, <strong>PrecursorCharge</strong>, <strong>FragmentIon</strong>, <strong>ProductCharge</strong>, <strong>IsotopeLabelType</strong>, <strong>Condition</strong>, <strong>BioReplicate</strong>, <strong>Run</strong>, <strong>Intensity</strong>. These variable names should be fixed. <code>MSstats</code> input from Skyline adapts the column scheme of the dataset so that it fits <code>MSstats</code> input format. However there are several extra column names and also some of them need to be changed. <code>SkylinetoMSstatsFormat</code> function helps pre-processing for making right format of MSstats input from Skyline output. For example, it renames some column name, and replace truncated peak intensities with NA. Another important step is to handle isotopic peaks before using <code>dataProcess</code>. The output from Skyline for DDA experiment has several measurements of peak area from the monoisotopic, M+1 and M+2 peaks. To get a robust measure of peptide intensity, we can sum over isotopic peaks per peptide or use the highest peak. Here we take a summation per peptide ion.</p>
+<p>Here is the summary of pre-processing steps in <code>SkylinetoMSstatsFormat</code> function (in orange box below).</p>
+<p><img src="img/MSstats_Skyline.png" /></p>
+<p>For further details, visit the help file using the following code.</p>
+<pre class="sourceCode r"><code class="sourceCode r">?SkylinetoMSstatsFormat</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># reformating and pre-processing for Skyline output.</span>
+raw_msstats &lt;-<span class="st"> </span><span class="kw">SkylinetoMSstatsFormat</span>(raw, <span class="dt">filter_with_Qvalue =</span> <span class="ot">FALSE</span>)</code></pre>
+<pre><code>## ** Peptides, that are used in more than one proteins, are removed.</code></pre>
+<pre><code>## Warning in SkylinetoMSstatsFormat(raw, filter_with_Qvalue = FALSE): NAs
+## introduced by coercion</code></pre>
+<pre><code>## ** Truncated peaks are replaced with NA.</code></pre>
+<pre><code>## ** 0 features have all NAs or zero intensity values and are removed.</code></pre>
+<p>You may see a warning message telling you that “NAs introduced by coercion”. This is okay! Let’s check what changed in our processed dataframe using the str() command.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(raw_msstats)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    30282 obs. of  12 variables:
+##  $ ProteinName     : Factor w/ 48 levels &quot;NP_001007697&quot;,..: 11 11 11 11 11 11 11 11 11 11 ...
+##  $ PeptideSequence : Factor w/ 125 levels &quot;AAPITQYLK&quot;,&quot;AAVFNHFISDGVK&quot;,..: 21 21 21 21 21 21 21 21 21 21 ...
+##  $ PrecursorCharge : int  2 2 2 2 2 2 2 2 2 2 ...
+##  $ FragmentIon     : Factor w/ 11 levels &quot;y10&quot;,&quot;y11&quot;,&quot;y12&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ ProductCharge   : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ IsotopeLabelType: Factor w/ 1 level &quot;light&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Condition       : Factor w/ 2 levels &quot;Diseased&quot;,&quot;Healthy&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ BioReplicate    : int  102 102 102 103 103 103 108 108 108 138 ...
+##  $ Run             : Factor w/ 42 levels &quot;D_102_REP1.raw&quot;,..: 1 2 3 4 5 6 7 8 9 10 ...
+##  $ Intensity       : num  14516 9607 7480 5692 5953 ...
+##  $ StandardType    : Factor w/ 2 levels &quot;&quot;,&quot;Global Standard&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Truncated       : Factor w/ 3 levels &quot;&quot;,&quot;False&quot;,&quot;True&quot;: 2 2 2 2 2 3 2 3 2 2 ...</code></pre>
+<p>Notice some columns were renamed, and also one column (previously “Area”, now renamed “Intensity”), changed object type! Remember I said we would avoid type conflicts in this tutorial? It’s enough just to acknowledge that this changed, but if you continue using R for your own data, you will likely run into object conflicts in the future and hopefully knowing this helps you troubleshoot!</p>
+</div>
+<div id="preliminary-check" class="section level4">
+<h4><span class="header-section-number">1.1.7.3</span> Preliminary check</h4>
+<p>So far, we’ve only looked at the processed dataframe raw_msstats at a high level. Let’s pull out just one column from the dataframe, the ProteinName column, and ask R how many unique proteins are in our data.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(<span class="kw">unique</span>(raw_msstats<span class="op">$</span>ProteinName)) </code></pre>
+<pre><code>## [1] 48</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">is.na</span>(raw_msstats<span class="op">$</span>Intensity)) </code></pre>
+<pre><code>## [1] 976</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="op">!</span><span class="kw">is.na</span>(raw_msstats<span class="op">$</span>Intensity) <span class="op">&amp;</span><span class="st"> </span>raw_msstats<span class="op">$</span>Intensity<span class="op">==</span><span class="dv">0</span>)</code></pre>
+<pre><code>## [1] 18</code></pre>
+<p>You should have 48 levels listed, which is exactly what we expected from our Skyline document! Let’s practice with one more, how many unique peptides are in our dataframe?</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unique</span>(raw_msstats<span class="op">$</span>PeptideSequence)</code></pre>
+<pre><code>##   [1] C[+57]SLPRPWALTFSYGR      LGGEEVSVAC[+57]K         
+##   [3] VGQPGDAGAAGPVAPLC[+57]PGR GSYNLQDLLAQAK            
+##   [5] TSDQIHFFFAK               LQPLDFK                  
+##   [7] SQLPGIIAEGR               DFATVYVDAVK              
+##   [9] DYVSQFESSTLGK             TGTNLMDFLSR              
+##  [11] LMSPEEKPAPAAK             GTITSIAALDDPK            
+##  [13] TQTPVQGC[+57]HLEGVTGHK    IFPENNIK                 
+##  [15] SLLNSLEEAK                ASGIIDTLFQDR             
+##  [17] C[+57]IVDGDDR             YLMFFAC[+57]TILVPK       
+##  [19] WVLTVAHC[+57]FEGR         HTNNGMIC[+57]LTSLLR      
+##  [21] YDC[+57]VAMNHHGVIR        VFWIEVALFWR              
+##  [23] SDFQVPC[+57]QYSQQLK       SFSC[+57]EVEILEGDK       
+##  [25] VGPAVELALAR               ENSSNILDNLLSR            
+##  [27] TQEQAQALR                 YHGVTGLVVMDK             
+##  [29] YQIFANTGHFK               C[+57]WAQDPTERPDFGQIK    
+##  [31] IGVHTGPVC[+57]AGVVGLK     TAC[+57]VLPAPAGPSQGK     
+##  [33] ALIHC[+57]LHMS            LTHGDFTWTTK              
+##  [35] WWGQEITELAQGPGR           LTTDHTPER                
+##  [37] AGDQILAINEINVK            AGVVAEYPAEK              
+##  [39] YGLDLGSLLVR               ISAEWGEFIK               
+##  [41] AGSWQITMK                 FAEDHFAHEATK             
+##  [43] DVNEAIQWMEEK              HQAFENEVNGR              
+##  [45] HQLLEAEMLAR               AAPITQYLK                
+##  [47] TLNSINIAVFSK              TVEHPFSVEEFVLPK          
+##  [49] DLTGFPQGADQR              AIAYLNTGYQR              
+##  [51] ATIDQNLEDLR               LNHQMEGLAFQMK            
+##  [53] NLAPLVEDVQSK              ELEEQLGPVAEETR           
+##  [55] LGPLVEQGR                 LQAEIFQAR                
+##  [57] LGVIVSAYMHYSK             HFLIETGPK                
+##  [59] WTNPDGTTSK                HEEEVERPAVEK             
+##  [61] SLVIQKPSEENAPK            ALYSEYTDGTFTK            
+##  [63] ENEGTYYGPDGR              ETFTYEWTVPK              
+##  [65] TYIWQIPER                 ENLSPPLGEC[+57]LLER      
+##  [67] ELLDSYIDGR                YGFYTHVFR                
+##  [69] AFMDC[+57]C[+57]NYITK     AAVFNHFISDGVK            
+##  [71] ATETQGVNLLFSSR            EEPSADALLPIDC[+57]R      
+##  [73] AIEDYVNEFSAR              GLIDEANQDFTNR            
+##  [75] MSPVPDLVPGSFK             SQLQEGPPEWK              
+##  [77] MHPELGSFYDSR              FGSLTSNFK                
+##  [79] DNC[+57]C[+57]ILDER       TFYQIGDSWEK              
+##  [81] ATGVFTTLQPLR              WLPSTSPVTGYR             
+##  [83] IAWESPQGQVSR              DYFISC[+57]PGR           
+##  [85] C[+57]NADPGLSALLSDHR      GATYAFSGSHYWR            
+##  [87] SGYTFQLLR                 EENGDFASFR               
+##  [89] LIC[+57]EATNFSPK          SGFTTEPVTVEAK            
+##  [91] SNSMVTLGC[+57]LVK         VTSAAFPSPIEK             
+##  [93] LALDNGGLAR                DQGPDVLLAK               
+##  [95] TLFSVLPGLK                YNAELESGNQFVLYR          
+##  [97] DGAETLYSFK                C[+57]SSLLWAGAAWLR       
+##  [99] NLGVVVAPHALR              AEQGAYLGPLPYK            
+## [101] TVSWAVTPK                 AISYLISGYQR              
+## [103] LADLPGNYITK               VNTLPLNFDK               
+## [105] SPQGLGASTAEISAR           TDEDVPSGPPR              
+## [107] YANVIAYDHSR               LFDELVVDK                
+## [109] ETGLMAFTNLK               VLIVEPEGIK               
+## [111] MLSGFIPLKPTVK             LQTEGDGIYTLNSEK          
+## [113] SVVDIGLIK                 IAELFSDLEER              
+## [115] FSISTDYSLK                EVLPELGIK                
+## [117] ALYQAEAFVADFK             IAELFSELDER              
+## [119] IFSQQADLSR                IITGNALFIDK              
+## [121] IQELVSGLK                 DVFSQQADLSR              
+## [123] HLNGFSVPR                 VVLSGSDATLAYSAFK         
+## [125] AFGLSSPR                 
+## 125 Levels: AAPITQYLK AAVFNHFISDGVK AEQGAYLGPLPYK ... YQIFANTGHFK</code></pre>
+<p>What else can you summarize about the dataframe?</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="data-processing---normalization-and-run-summarization" class="section level2">
+<h2><span class="header-section-number">1.2</span> Data processing - Normalization and run summarization</h2>
+<p>Let’s start processing steps. It includes log transformation of intensities, normalization and run-level summarization.</p>
+<p><img src="img/MSstats_dataProcess.png" /></p>
+<div id="normalizing-and-summarizing-data-with-dataprocess" class="section level4">
+<h4><span class="header-section-number">1.2.0.1</span> Normalizing and summarizing data with dataProcess</h4>
+<p>To get started with this function, visit the help section of <code>dataProcess</code> first:</p>
+<pre class="sourceCode r"><code class="sourceCode r">?dataProcess</code></pre>
+<p><code>dataProcess</code> perform (1) normalization first. The default option for normalization is <code>equalizeMedians</code>. `equalizeMedians’ fits for label-based SRM experiments, which we can use reference signals. There are three more options for normalization. Depending on the suitable assumption for your experiment, you can choose one of them.</p>
+<p>Then, (2) run level summarization will be performed including missing value imputation by accerelated failure model and robust parameter estimation by TMP (Tukey’s median polish).</p>
+<p>Below show the default for all options in dataProcess except <code>censoredInt</code>. <code>censoredInt='0'</code> should be used for Skyline output.</p>
+<p><strong>Note:</strong> do pay attention to the default options, which may not be appropriate in some situations and need to be changed. For example, the default option for normalization is equalizeMedians. If you have a spiked in standard, you may set this to globalStandards and define the standard with nameStandards.</p>
+<pre class="sourceCode r"><code class="sourceCode r">quant_tmp &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(<span class="dt">raw =</span> raw_msstats, 
+                         <span class="dt">normalization=</span><span class="st">&quot;globalStandards&quot;</span>, 
+                         <span class="dt">nameStandards=</span><span class="st">&quot;VVLSGSDATLAYSAFK&quot;</span>,
+                         <span class="dt">censoredInt =</span> <span class="st">&#39;0&#39;</span>)</code></pre>
+<pre><code>##                        
+##   Summary of Features :
+##                          count
+## # of Protein                48
+## # of Peptides/Protein      1-5
+## # of Transitions/Peptide   3-7
+##                       
+##   Summary of Samples :
+##                            Diseased Healthy
+## # of MS runs                     21      21
+## # of Biological Replicates        7       7
+## # of Technical Replicates         3       3
+## 
+  |                                                                       
+  |                                                                 |   0%
+  |                                                                       
+  |=                                                                |   2%
+  |                                                                       
+  |===                                                              |   4%
+  |                                                                       
+  |====                                                             |   6%
+  |                                                                       
+  |=====                                                            |   8%
+  |                                                                       
+  |=======                                                          |  10%
+  |                                                                       
+  |========                                                         |  12%
+  |                                                                       
+  |=========                                                        |  15%
+  |                                                                       
+  |===========                                                      |  17%
+  |                                                                       
+  |============                                                     |  19%
+  |                                                                       
+  |==============                                                   |  21%
+  |                                                                       
+  |===============                                                  |  23%
+  |                                                                       
+  |================                                                 |  25%
+  |                                                                       
+  |==================                                               |  27%
+  |                                                                       
+  |===================                                              |  29%
+  |                                                                       
+  |====================                                             |  31%
+  |                                                                       
+  |======================                                           |  33%
+  |                                                                       
+  |=======================                                          |  35%
+  |                                                                       
+  |========================                                         |  38%
+  |                                                                       
+  |==========================                                       |  40%
+  |                                                                       
+  |===========================                                      |  42%
+  |                                                                       
+  |============================                                     |  44%
+  |                                                                       
+  |==============================                                   |  46%
+  |                                                                       
+  |===============================                                  |  48%
+  |                                                                       
+  |================================                                 |  50%
+  |                                                                       
+  |==================================                               |  52%
+  |                                                                       
+  |===================================                              |  54%
+  |                                                                       
+  |=====================================                            |  56%
+  |                                                                       
+  |======================================                           |  58%
+  |                                                                       
+  |=======================================                          |  60%
+  |                                                                       
+  |=========================================                        |  62%
+  |                                                                       
+  |==========================================                       |  65%
+  |                                                                       
+  |===========================================                      |  67%
+  |                                                                       
+  |=============================================                    |  69%
+  |                                                                       
+  |==============================================                   |  71%
+  |                                                                       
+  |===============================================                  |  73%
+  |                                                                       
+  |=================================================                |  75%
+  |                                                                       
+  |==================================================               |  77%
+  |                                                                       
+  |===================================================              |  79%
+  |                                                                       
+  |=====================================================            |  81%
+  |                                                                       
+  |======================================================           |  83%
+  |                                                                       
+  |========================================================         |  85%
+  |                                                                       
+  |=========================================================        |  88%
+  |                                                                       
+  |==========================================================       |  90%
+  |                                                                       
+  |============================================================     |  92%
+  |                                                                       
+  |=============================================================    |  94%
+  |                                                                       
+  |==============================================================   |  96%
+  |                                                                       
+  |================================================================ |  98%
+  |                                                                       
+  |=================================================================| 100%</code></pre>
+<p>Let’s check output from <code>dataProcess</code>.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># show the name of outputs</span>
+<span class="kw">names</span>(quant_tmp)</code></pre>
+<pre><code>## [1] &quot;ProcessedData&quot;     &quot;RunlevelData&quot;      &quot;SummaryMethod&quot;    
+## [4] &quot;ModelQC&quot;           &quot;PredictBySurvival&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># show reformated and normalized data.</span>
+<span class="co"># &#39;ABUNDANCE&#39; column has normalized log2 transformed intensities.</span>
+<span class="kw">head</span>(quant_tmp<span class="op">$</span>ProcessedData)</code></pre>
+<pre><code>##            PROTEIN              PEPTIDE TRANSITION
+## 23899 NP_001007697 C[+57]SSLLWAGAAWLR_2       y3_1
+## 23857 NP_001007697 C[+57]SSLLWAGAAWLR_2       y4_1
+## 23815 NP_001007697 C[+57]SSLLWAGAAWLR_2       y5_1
+## 23773 NP_001007697 C[+57]SSLLWAGAAWLR_2       y6_1
+## 23731 NP_001007697 C[+57]SSLLWAGAAWLR_2       y7_1
+## 23689 NP_001007697 C[+57]SSLLWAGAAWLR_2       y8_1
+##                         FEATURE LABEL GROUP_ORIGINAL SUBJECT_ORIGINAL RUN
+## 23899 C[+57]SSLLWAGAAWLR_2_y3_1     L       Diseased              102   1
+## 23857 C[+57]SSLLWAGAAWLR_2_y4_1     L       Diseased              102   1
+## 23815 C[+57]SSLLWAGAAWLR_2_y5_1     L       Diseased              102   1
+## 23773 C[+57]SSLLWAGAAWLR_2_y6_1     L       Diseased              102   1
+## 23731 C[+57]SSLLWAGAAWLR_2_y7_1     L       Diseased              102   1
+## 23689 C[+57]SSLLWAGAAWLR_2_y8_1     L       Diseased              102   1
+##       GROUP SUBJECT INTENSITY SUBJECT_NESTED  ABUNDANCE FRACTION
+## 23899     1       1        24            1.1  4.1151229        1
+## 23857     1       1       182            1.1  7.0379550        1
+## 23815     1       1       782            1.1  9.1411852        1
+## 23773     1       1      1580            1.1 10.1558692        1
+## 23731     1       1         1            1.1  0.0000000        1
+## 23689     1       1         2            1.1  0.5301604        1
+##          originalRUN censored
+## 23899 D_102_REP1.raw     TRUE
+## 23857 D_102_REP1.raw    FALSE
+## 23815 D_102_REP1.raw    FALSE
+## 23773 D_102_REP1.raw    FALSE
+## 23731 D_102_REP1.raw     TRUE
+## 23689 D_102_REP1.raw     TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This table includes run-level summarized log2 intensities. (column : LogIntensities)</span>
+<span class="co"># Now one summarized log2 intensities per Protein and Run.</span>
+<span class="co"># NumMeasuredFeature : show how many features are used for run-level summarization.</span>
+<span class="co">#         If there is no missing value, it should be the number of features in certain protein.</span>
+<span class="co"># MissingPercentage : the number of missing features / the number of features in certain protein.</span>
+<span class="kw">head</span>(quant_tmp<span class="op">$</span>RunlevelData)</code></pre>
+<pre><code>##   RUN      Protein LogIntensities NumMeasuredFeature MissingPercentage
+## 1   1 NP_001007697       12.84670                 12                 0
+## 2   2 NP_001007697       13.52696                 12                 0
+## 3   3 NP_001007697       13.47479                 12                 0
+## 4   4 NP_001007697       11.92295                 12                 0
+## 5   5 NP_001007697       11.87338                 12                 0
+## 6   6 NP_001007697       11.91218                 12                 0
+##   more50missing NumImputedFeature    originalRUN GROUP GROUP_ORIGINAL
+## 1         FALSE                 0 D_102_REP1.raw     1       Diseased
+## 2         FALSE                 0 D_102_REP2.raw     1       Diseased
+## 3         FALSE                 0 D_102_REP3.raw     1       Diseased
+## 4         FALSE                 0 D_103_REP1.raw     1       Diseased
+## 5         FALSE                 0 D_103_REP2.raw     1       Diseased
+## 6         FALSE                 0 D_103_REP3.raw     1       Diseased
+##   SUBJECT_ORIGINAL SUBJECT_NESTED SUBJECT
+## 1              102            1.1       1
+## 2              102            1.1       1
+## 3              102            1.1       1
+## 4              103            1.2       2
+## 5              103            1.2       2
+## 6              103            1.2       2</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># show which summarization method is used.</span>
+<span class="kw">head</span>(quant_tmp<span class="op">$</span>SummaryMethod)</code></pre>
+<pre><code>## [1] &quot;TMP&quot;</code></pre>
+<p>Note that the above command, although we only specify two parameters, raw and censoredInt, is running with all the other parameters, they’re just automatically set to default. So, for example, the line above is the same as the line below. Note: censoredInt=‘NA’ for the input from other spectral tools.</p>
+<pre class="sourceCode r"><code class="sourceCode r">quant_tmp &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(<span class="dt">raw =</span> raw_msstats, 
+                        <span class="dt">logTrans =</span> <span class="dv">2</span>, 
+                        <span class="dt">normalization =</span> <span class="st">&quot;equalizeMedians&quot;</span>, 
+                        <span class="dt">fillIncompleteRows =</span> <span class="ot">TRUE</span>, 
+                        <span class="dt">featureSubset =</span> <span class="st">&quot;all&quot;</span>, 
+                        <span class="dt">remove_uninformative_feature_outlier =</span> <span class="ot">FALSE</span>, 
+                        <span class="dt">summaryMethod =</span> <span class="st">&quot;TMP&quot;</span>, 
+                        <span class="dt">censoredInt =</span> <span class="st">&quot;0&quot;</span>, 
+                        <span class="dt">cutoffCensored =</span> <span class="st">&quot;minFeature&quot;</span>, 
+                        <span class="dt">MBimpute =</span> <span class="ot">TRUE</span>)</code></pre>
+<pre><code>##                        
+##   Summary of Features :
+##                          count
+## # of Protein                48
+## # of Peptides/Protein      1-5
+## # of Transitions/Peptide   3-7
+##                       
+##   Summary of Samples :
+##                            Diseased Healthy
+## # of MS runs                     21      21
+## # of Biological Replicates        7       7
+## # of Technical Replicates         3       3
+## 
+  |                                                                       
+  |                                                                 |   0%
+  |                                                                       
+  |=                                                                |   2%
+  |                                                                       
+  |===                                                              |   4%
+  |                                                                       
+  |====                                                             |   6%
+  |                                                                       
+  |=====                                                            |   8%
+  |                                                                       
+  |=======                                                          |  10%
+  |                                                                       
+  |========                                                         |  12%
+  |                                                                       
+  |=========                                                        |  15%
+  |                                                                       
+  |===========                                                      |  17%
+  |                                                                       
+  |============                                                     |  19%
+  |                                                                       
+  |==============                                                   |  21%
+  |                                                                       
+  |===============                                                  |  23%
+  |                                                                       
+  |================                                                 |  25%
+  |                                                                       
+  |==================                                               |  27%
+  |                                                                       
+  |===================                                              |  29%
+  |                                                                       
+  |====================                                             |  31%
+  |                                                                       
+  |======================                                           |  33%
+  |                                                                       
+  |=======================                                          |  35%
+  |                                                                       
+  |========================                                         |  38%
+  |                                                                       
+  |==========================                                       |  40%
+  |                                                                       
+  |===========================                                      |  42%
+  |                                                                       
+  |============================                                     |  44%
+  |                                                                       
+  |==============================                                   |  46%
+  |                                                                       
+  |===============================                                  |  48%
+  |                                                                       
+  |================================                                 |  50%
+  |                                                                       
+  |==================================                               |  52%
+  |                                                                       
+  |===================================                              |  54%
+  |                                                                       
+  |=====================================                            |  56%
+  |                                                                       
+  |======================================                           |  58%
+  |                                                                       
+  |=======================================                          |  60%
+  |                                                                       
+  |=========================================                        |  62%
+  |                                                                       
+  |==========================================                       |  65%
+  |                                                                       
+  |===========================================                      |  67%
+  |                                                                       
+  |=============================================                    |  69%
+  |                                                                       
+  |==============================================                   |  71%
+  |                                                                       
+  |===============================================                  |  73%
+  |                                                                       
+  |=================================================                |  75%
+  |                                                                       
+  |==================================================               |  77%
+  |                                                                       
+  |===================================================              |  79%
+  |                                                                       
+  |=====================================================            |  81%
+  |                                                                       
+  |======================================================           |  83%
+  |                                                                       
+  |========================================================         |  85%
+  |                                                                       
+  |=========================================================        |  88%
+  |                                                                       
+  |==========================================================       |  90%
+  |                                                                       
+  |============================================================     |  92%
+  |                                                                       
+  |=============================================================    |  94%
+  |                                                                       
+  |==============================================================   |  96%
+  |                                                                       
+  |================================================================ |  98%
+  |                                                                       
+  |=================================================================| 100%</code></pre>
+<p>Output of the dataProcess() function contains the processed and run-level summarized data as well as relevant information for the summarization step. Let’s unpack the output from dataProcess(), which we named quant_tmp above, so that we can be more familiar with what we just did to our data.</p>
+<div id="use-no-normalization" class="section level5">
+<h5><span class="header-section-number">1.2.0.1.1</span> use no normalization</h5>
+<pre class="sourceCode r"><code class="sourceCode r">quant_nonorm &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(<span class="dt">raw =</span> raw_msstats, 
+                            <span class="dt">normalization=</span><span class="ot">FALSE</span>,
+                            <span class="dt">censoredInt =</span> <span class="st">&#39;0&#39;</span>)</code></pre>
+<pre><code>##                        
+##   Summary of Features :
+##                          count
+## # of Protein                48
+## # of Peptides/Protein      1-5
+## # of Transitions/Peptide   3-7
+##                       
+##   Summary of Samples :
+##                            Diseased Healthy
+## # of MS runs                     21      21
+## # of Biological Replicates        7       7
+## # of Technical Replicates         3       3
+## 
+  |                                                                       
+  |                                                                 |   0%
+  |                                                                       
+  |=                                                                |   2%
+  |                                                                       
+  |===                                                              |   4%
+  |                                                                       
+  |====                                                             |   6%
+  |                                                                       
+  |=====                                                            |   8%
+  |                                                                       
+  |=======                                                          |  10%
+  |                                                                       
+  |========                                                         |  12%
+  |                                                                       
+  |=========                                                        |  15%
+  |                                                                       
+  |===========                                                      |  17%
+  |                                                                       
+  |============                                                     |  19%
+  |                                                                       
+  |==============                                                   |  21%
+  |                                                                       
+  |===============                                                  |  23%
+  |                                                                       
+  |================                                                 |  25%
+  |                                                                       
+  |==================                                               |  27%
+  |                                                                       
+  |===================                                              |  29%
+  |                                                                       
+  |====================                                             |  31%
+  |                                                                       
+  |======================                                           |  33%
+  |                                                                       
+  |=======================                                          |  35%
+  |                                                                       
+  |========================                                         |  38%
+  |                                                                       
+  |==========================                                       |  40%
+  |                                                                       
+  |===========================                                      |  42%
+  |                                                                       
+  |============================                                     |  44%
+  |                                                                       
+  |==============================                                   |  46%
+  |                                                                       
+  |===============================                                  |  48%
+  |                                                                       
+  |================================                                 |  50%
+  |                                                                       
+  |==================================                               |  52%
+  |                                                                       
+  |===================================                              |  54%
+  |                                                                       
+  |=====================================                            |  56%
+  |                                                                       
+  |======================================                           |  58%
+  |                                                                       
+  |=======================================                          |  60%
+  |                                                                       
+  |=========================================                        |  62%
+  |                                                                       
+  |==========================================                       |  65%
+  |                                                                       
+  |===========================================                      |  67%
+  |                                                                       
+  |=============================================                    |  69%
+  |                                                                       
+  |==============================================                   |  71%
+  |                                                                       
+  |===============================================                  |  73%
+  |                                                                       
+  |=================================================                |  75%
+  |                                                                       
+  |==================================================               |  77%
+  |                                                                       
+  |===================================================              |  79%
+  |                                                                       
+  |=====================================================            |  81%
+  |                                                                       
+  |======================================================           |  83%
+  |                                                                       
+  |========================================================         |  85%
+  |                                                                       
+  |=========================================================        |  88%
+  |                                                                       
+  |==========================================================       |  90%
+  |                                                                       
+  |============================================================     |  92%
+  |                                                                       
+  |=============================================================    |  94%
+  |                                                                       
+  |==============================================================   |  96%
+  |                                                                       
+  |================================================================ |  98%
+  |                                                                       
+  |=================================================================| 100%</code></pre>
+<p>What’s the difference between two normalization methods?
+With different methods for normalization, the summarized values are different. Let’s pull out the RunlevelData from each object, the quant_tmp object that used global standard peptide for normalization and the quant_nonorm object that did not apply any normalization. Specifically, look at the column named LogIntensities.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(quant_tmp<span class="op">$</span>RunlevelData)</code></pre>
+<pre><code>##   RUN      Protein LogIntensities NumMeasuredFeature MissingPercentage
+## 1   1 NP_001007697       12.80623                 12                 0
+## 2   2 NP_001007697       13.39071                 12                 0
+## 3   3 NP_001007697       13.11670                 12                 0
+## 4   4 NP_001007697       12.18845                 12                 0
+## 5   5 NP_001007697       12.33439                 12                 0
+## 6   6 NP_001007697       12.24504                 12                 0
+##   more50missing NumImputedFeature    originalRUN GROUP GROUP_ORIGINAL
+## 1         FALSE                 0 D_102_REP1.raw     1       Diseased
+## 2         FALSE                 0 D_102_REP2.raw     1       Diseased
+## 3         FALSE                 0 D_102_REP3.raw     1       Diseased
+## 4         FALSE                 0 D_103_REP1.raw     1       Diseased
+## 5         FALSE                 0 D_103_REP2.raw     1       Diseased
+## 6         FALSE                 0 D_103_REP3.raw     1       Diseased
+##   SUBJECT_ORIGINAL SUBJECT_NESTED SUBJECT
+## 1              102            1.1       1
+## 2              102            1.1       1
+## 3              102            1.1       1
+## 4              103            1.2       2
+## 5              103            1.2       2
+## 6              103            1.2       2</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(quant_nonorm<span class="op">$</span>RunlevelData)</code></pre>
+<pre><code>##   RUN      Protein LogIntensities NumMeasuredFeature MissingPercentage
+## 1   1 NP_001007697       13.27635                 12                 0
+## 2   2 NP_001007697       13.68839                 12                 0
+## 3   3 NP_001007697       13.26387                 12                 0
+## 4   4 NP_001007697       12.23041                 12                 0
+## 5   5 NP_001007697       12.06794                 12                 0
+## 6   6 NP_001007697       11.82927                 12                 0
+##   more50missing NumImputedFeature    originalRUN GROUP GROUP_ORIGINAL
+## 1         FALSE                 0 D_102_REP1.raw     1       Diseased
+## 2         FALSE                 0 D_102_REP2.raw     1       Diseased
+## 3         FALSE                 0 D_102_REP3.raw     1       Diseased
+## 4         FALSE                 0 D_103_REP1.raw     1       Diseased
+## 5         FALSE                 0 D_103_REP2.raw     1       Diseased
+## 6         FALSE                 0 D_103_REP3.raw     1       Diseased
+##   SUBJECT_ORIGINAL SUBJECT_NESTED SUBJECT
+## 1              102            1.1       1
+## 2              102            1.1       1
+## 3              102            1.1       1
+## 4              103            1.2       2
+## 5              103            1.2       2
+## 6              103            1.2       2</code></pre>
+<hr />
+</div>
+</div>
+<div id="visualization-of-processed-data" class="section level4">
+<h4><span class="header-section-number">1.2.0.2</span> Visualization of processed data</h4>
+<p>Next we’ll be using the dataProcessPlots function to visualize our data. To get the documentation for this function, we can again use the ? symbol.</p>
+<pre class="sourceCode r"><code class="sourceCode r">?dataProcessPlots</code></pre>
+<div id="quality-control-plots" class="section level5">
+<h5><span class="header-section-number">1.2.0.2.1</span> Quality control plots</h5>
+<p>Now let’s look at what the equalize medians procedure did to our data.
+The QCplot type shows boxplots of peak intensities (on log scale) in all runs, where the bottom and top of a box represent the first and third quartiles of the log-intensities and the band inside the box is the median. It provides a quick way to examine and compare distributions between runs, and to detect systematic bias. Also, it is good visualization to check normalization. However, not good to see individual intensities.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_tmp, <span class="dt">type =</span> <span class="st">&quot;QCplot&quot;</span>, <span class="dt">address =</span> <span class="st">&#39;MSstats_&#39;</span>)</code></pre>
+<p>By running the above command, TMP_QCPlot.pdf is generated in the working directory. If you can’t find the plot, remember you can use getwd() to see where your working directory is.</p>
+<p>Here’s what the QC plot would look if we did normalize with global standard.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>Here’s what the QC plot would look if we didn’t normalize.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+</div>
+<div id="profile-plots" class="section level5">
+<h5><span class="header-section-number">1.2.0.2.2</span> Profile plots</h5>
+<p>Profile plot shows individual observations for each protein. It is useful to examine the consistency of measurements in feature, run and condition, and to detect potential source of variation and missingness in the data. Each dot represents one feature intensity.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_tmp, <span class="dt">type=</span><span class="st">&quot;Profileplot&quot;</span>, 
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>, <span class="dt">address =</span> <span class="st">&quot;MSstats_&quot;</span>)</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001007697 ( 1  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001008724 ( 2  of  48 )</code></pre>
+<pre><code>## Warning: Removed 21 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 127 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001010968 ( 3  of  48 )</code></pre>
+<pre><code>## Warning: Removed 59 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001011908 ( 4  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001012027 ( 5  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001013967 ( 6  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001033064 ( 7  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001101333 ( 8  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 35 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001121161 ( 9  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036620 ( 10  of  48 )</code></pre>
+<pre><code>## Warning: Removed 8 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 43 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036629 ( 11  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 9 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036664 ( 12  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036691 ( 13  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036714 ( 14  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036745 ( 15  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036774 ( 16  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 30 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036789 ( 17  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036828 ( 18  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036869 ( 19  of  48 )</code></pre>
+<pre><code>## Warning: Removed 23 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 173 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036870 ( 20  of  48 )</code></pre>
+<pre><code>## Warning: Removed 84 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_037001 ( 21  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_037030 ( 22  of  48 )</code></pre>
+<pre><code>## Warning: Removed 111 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 163 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_037244 ( 23  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_058690 ( 24  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 37 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_058716 ( 25  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_062016 ( 26  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_062212 ( 27  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_062242 ( 28  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 10 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_075213 ( 29  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_113692 ( 30  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_150641 ( 31  of  48 )</code></pre>
+<pre><code>## Warning: Removed 18 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 70 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_444180 ( 32  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_445770 ( 33  of  48 )</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_446290 ( 34  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_476487 ( 35  of  48 )</code></pre>
+<pre><code>## Warning: Removed 10 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 73 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_602308 ( 36  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_620183 ( 37  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_665722 ( 38  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_758823 ( 39  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_872279 ( 40  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_872280 ( 41  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  S ( 42  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001053003 ( 43  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001057320 ( 44  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 7 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001066264 ( 45  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001067936 ( 46  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001068814 ( 47  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_216782 ( 48  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001007697 ( 1  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001008724 ( 2  of  48 )</code></pre>
+<pre><code>## Warning: Removed 21 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 127 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001010968 ( 3  of  48 )</code></pre>
+<pre><code>## Warning: Removed 59 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001011908 ( 4  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001012027 ( 5  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001013967 ( 6  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001033064 ( 7  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001101333 ( 8  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 35 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001121161 ( 9  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036620 ( 10  of  48 )</code></pre>
+<pre><code>## Warning: Removed 8 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 46 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036629 ( 11  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 9 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036664 ( 12  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036691 ( 13  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036714 ( 14  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036745 ( 15  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036774 ( 16  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 30 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036789 ( 17  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036828 ( 18  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036869 ( 19  of  48 )</code></pre>
+<pre><code>## Warning: Removed 24 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 182 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036870 ( 20  of  48 )</code></pre>
+<pre><code>## Warning: Removed 84 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_037001 ( 21  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_037030 ( 22  of  48 )</code></pre>
+<pre><code>## Warning: Removed 111 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 163 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_037244 ( 23  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_058690 ( 24  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 37 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_058716 ( 25  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_062016 ( 26  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_062212 ( 27  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_062242 ( 28  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 10 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_075213 ( 29  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_113692 ( 30  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_150641 ( 31  of  48 )</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 71 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_444180 ( 32  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_445770 ( 33  of  48 )</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_446290 ( 34  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_476487 ( 35  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 86 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_602308 ( 36  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_620183 ( 37  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_665722 ( 38  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_758823 ( 39  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_872279 ( 40  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_872280 ( 41  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  S ( 42  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001053003 ( 43  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001057320 ( 44  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 7 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001066264 ( 45  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001067936 ( 46  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001068814 ( 47  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_216782 ( 48  of  48 )</code></pre>
+<p>By running the above command, two files <strong>MSstats_ProfilePlot.pdf</strong> and <strong>MSstats_ProfilePlot_wSummarization.pdf</strong> are generated in the current directory.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_tmp, <span class="dt">type=</span><span class="st">&quot;Profileplot&quot;</span>, 
+                 <span class="dt">originalPlot =</span> <span class="ot">TRUE</span>, <span class="dt">summaryPlot =</span> <span class="ot">FALSE</span>,
+                 <span class="dt">which.Protein =</span> <span class="st">&#39;NP_036620&#39;</span>,
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>, <span class="dt">address =</span> <span class="ot">FALSE</span>)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036620 ( 1  of  1 )</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_tmp, <span class="dt">type=</span><span class="st">&quot;Profileplot&quot;</span>, 
+                <span class="dt">originalPlot =</span> <span class="ot">FALSE</span>, <span class="dt">summaryPlot =</span> <span class="ot">TRUE</span>,
+                <span class="dt">which.Protein =</span> <span class="st">&#39;NP_036620&#39;</span>,
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>, <span class="dt">address =</span> <span class="ot">FALSE</span>)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036620 ( 1  of  1 )</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-27-2.png" width="672" /></p>
+<p>The dots are connected by a line per feature. If a line is disconnected, it means there is no value (missing value). Colors represent different peptides and charge states.</p>
+<p>Parallel profiles on log scale correspond to consistent peak area percentage, from which we gain confidence in the integration of the peptide. When any inconsistency is observed, we should look into the data before conducting subsequent analysis.</p>
+<p>Let’s compare these results from global standard normalization to the results we get when we use no normalization. To do this, we can simply run the same command, but replace the data = quant_tmp parameter setting with the linear model dataframe quant_nonorm:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_nonorm, <span class="dt">type=</span><span class="st">&quot;Profileplot&quot;</span>, 
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>, <span class="dt">address =</span> <span class="st">&quot;MSstats_nonorm_&quot;</span>)</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001007697 ( 1  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001008724 ( 2  of  48 )</code></pre>
+<pre><code>## Warning: Removed 21 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 127 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001010968 ( 3  of  48 )</code></pre>
+<pre><code>## Warning: Removed 59 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001011908 ( 4  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001012027 ( 5  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001013967 ( 6  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001033064 ( 7  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001101333 ( 8  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 35 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_001121161 ( 9  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036620 ( 10  of  48 )</code></pre>
+<pre><code>## Warning: Removed 8 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 43 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036629 ( 11  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 9 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036664 ( 12  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036691 ( 13  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036714 ( 14  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036745 ( 15  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036774 ( 16  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 30 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036789 ( 17  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036828 ( 18  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036869 ( 19  of  48 )</code></pre>
+<pre><code>## Warning: Removed 23 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 173 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_036870 ( 20  of  48 )</code></pre>
+<pre><code>## Warning: Removed 84 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_037001 ( 21  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_037030 ( 22  of  48 )</code></pre>
+<pre><code>## Warning: Removed 111 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 163 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_037244 ( 23  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_058690 ( 24  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 37 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_058716 ( 25  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_062016 ( 26  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_062212 ( 27  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_062242 ( 28  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 10 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_075213 ( 29  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_113692 ( 30  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_150641 ( 31  of  48 )</code></pre>
+<pre><code>## Warning: Removed 18 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 70 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_444180 ( 32  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_445770 ( 33  of  48 )</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_446290 ( 34  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_476487 ( 35  of  48 )</code></pre>
+<pre><code>## Warning: Removed 10 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 73 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_602308 ( 36  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_620183 ( 37  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_665722 ( 38  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_758823 ( 39  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  NP_872279 ( 40  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  NP_872280 ( 41  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  S ( 42  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001053003 ( 43  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001057320 ( 44  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 7 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001066264 ( 45  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001067936 ( 46  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_001068814 ( 47  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot for  XP_216782 ( 48  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001007697 ( 1  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001008724 ( 2  of  48 )</code></pre>
+<pre><code>## Warning: Removed 21 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 127 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001010968 ( 3  of  48 )</code></pre>
+<pre><code>## Warning: Removed 59 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001011908 ( 4  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001012027 ( 5  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001013967 ( 6  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001033064 ( 7  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001101333 ( 8  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 35 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_001121161 ( 9  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036620 ( 10  of  48 )</code></pre>
+<pre><code>## Warning: Removed 8 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 46 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036629 ( 11  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 9 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036664 ( 12  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036691 ( 13  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036714 ( 14  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036745 ( 15  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036774 ( 16  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 30 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036789 ( 17  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036828 ( 18  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036869 ( 19  of  48 )</code></pre>
+<pre><code>## Warning: Removed 24 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 182 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_036870 ( 20  of  48 )</code></pre>
+<pre><code>## Warning: Removed 84 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_037001 ( 21  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_037030 ( 22  of  48 )</code></pre>
+<pre><code>## Warning: Removed 111 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 163 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_037244 ( 23  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_058690 ( 24  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 37 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_058716 ( 25  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_062016 ( 26  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_062212 ( 27  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_062242 ( 28  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 10 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_075213 ( 29  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_113692 ( 30  of  48 )</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_150641 ( 31  of  48 )</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 71 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_444180 ( 32  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_445770 ( 33  of  48 )</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_446290 ( 34  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_476487 ( 35  of  48 )</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 86 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_602308 ( 36  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_620183 ( 37  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_665722 ( 38  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 12 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_758823 ( 39  of  48 )</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_872279 ( 40  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  NP_872280 ( 41  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  S ( 42  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001053003 ( 43  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001057320 ( 44  of  48 )</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 7 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001066264 ( 45  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001067936 ( 46  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_001068814 ( 47  of  48 )</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  XP_216782 ( 48  of  48 )</code></pre>
+<p>Check the generated plots in your working directory and see how each method summarizes the data in different ways.</p>
+<p>We can generate these for all proteins but also for single proteins at a time. Suppose we just want to generate a plot for S. We can specify a particular protein using the <strong>which.Protein</strong> parameter, and setting that parameter to the protein. (Tip: to see all the unique proteins in quant_tmp, you can use unique(quant_tmp<span class="math inline">\(ProcessedData\)</span>PROTEIN).)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_tmp, <span class="dt">type=</span><span class="st">&quot;Profileplot&quot;</span>, 
+                 <span class="dt">originalPlot =</span> <span class="ot">TRUE</span>, <span class="dt">summaryPlot =</span> <span class="ot">FALSE</span>,
+                 <span class="dt">which.Protein =</span> <span class="st">&#39;S&#39;</span>,
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>, <span class="dt">address =</span> <span class="ot">FALSE</span>)</code></pre>
+<pre><code>## Drew the Profile plot for  S ( 1  of  1 )</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_nonorm, <span class="dt">type=</span><span class="st">&quot;Profileplot&quot;</span>, 
+                <span class="dt">originalPlot =</span> <span class="ot">FALSE</span>, <span class="dt">summaryPlot =</span> <span class="ot">TRUE</span>,
+                <span class="dt">which.Protein =</span> <span class="st">&#39;S&#39;</span>,
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>, <span class="dt">address =</span> <span class="ot">FALSE</span>)</code></pre>
+<pre><code>## Drew the Profile plot with summarization for  S ( 1  of  1 )</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-29-2.png" width="672" /></p>
+</div>
+<div id="condition-plots" class="section level5">
+<h5><span class="header-section-number">1.2.0.2.3</span> Condition plots</h5>
+<p>The Conditionplot type shows the mean of log-intensity and the 95% confidence interval for each condition. Although this visualization is helpful to get a feel for the data, if we want to say whether a protein is differentially abundant between conditions, this plot is not sufficient and group comparison analysis needs to be conducted! For now, these plots simply provide some helpful summary visualizations of the data.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_tmp, <span class="dt">type =</span> <span class="st">&quot;conditionplot&quot;</span>, 
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>,
+                 <span class="dt">address =</span> <span class="st">&quot;MSstats_&quot;</span>)</code></pre>
+<p>We can draw the condition plot for a protein, <code>NP_036620</code> .</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dataProcessPlots</span>(<span class="dt">data =</span> quant_tmp, <span class="dt">type=</span><span class="st">&quot;Conditionplot&quot;</span>, 
+                 <span class="dt">which.Protein =</span> <span class="st">&#39;NP_036620&#39;</span>,
+                 <span class="dt">width =</span> <span class="dv">7</span>, <span class="dt">height =</span> <span class="dv">7</span>, <span class="dt">address =</span> <span class="ot">FALSE</span>)</code></pre>
+<p>Glance through the plots created by the conditionplot type. Are there any proteins that look interesting? Remember, just having the plot doesn’t tell us if the differential expression is significant! To make that claim, we need to do the group comparison.</p>
+<hr />
+</div>
+</div>
+<div id="different-normalization-option" class="section level4">
+<h4><span class="header-section-number">1.2.0.3</span> Different normalization option</h4>
+<p>Let’s see the different normalization effect with SRM dataset including two proteins</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(SRMRawData)</code></pre>
+<pre><code>##     ProteinName PeptideSequence PrecursorCharge FragmentIon ProductCharge
+## 243        IDHC   ATDVIVPEEGELR               2          y7            NA
+## 244        IDHC   ATDVIVPEEGELR               2          y7            NA
+## 245        IDHC   ATDVIVPEEGELR               2          y8            NA
+## 246        IDHC   ATDVIVPEEGELR               2          y8            NA
+## 247        IDHC   ATDVIVPEEGELR               2          y9            NA
+## 248        IDHC   ATDVIVPEEGELR               2          y9            NA
+##     IsotopeLabelType Condition BioReplicate Run   Intensity
+## 243                H         1        ReplA   1 84361.08350
+## 244                L         1        ReplA   1   215.13526
+## 245                H         1        ReplA   1 29778.10188
+## 246                L         1        ReplA   1    98.02134
+## 247                H         1        ReplA   1 17921.29255
+## 248                L         1        ReplA   1    60.47029</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unique</span>(SRMRawData<span class="op">$</span>ProteinName)</code></pre>
+<pre><code>## [1] IDHC PMG2
+## 45 Levels: ACEA ACH1 ACON ADH1 ADH2 ADH4 ALDH6 ALF CISY1 CISY2 ... SUCB</code></pre>
+<div id="no-normalization" class="section level5">
+<h5><span class="header-section-number">1.2.0.3.1</span> No normalization</h5>
+<p>No normalization is performed. If you had your own normalization before <code>MSstats</code>, you should use like below.</p>
+<pre class="sourceCode r"><code class="sourceCode r">srm.nonorm &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(SRMRawData, <span class="dt">normalization=</span><span class="ot">FALSE</span>)
+<span class="kw">dataProcessPlots</span>(srm.nonorm, <span class="dt">type=</span><span class="st">&#39;QCplot&#39;</span>, <span class="dt">address=</span><span class="st">&#39;srm_noNorm_&#39;</span>)</code></pre>
+<p><img src="img/srm_noNorm_QCPlot.png" style="width:50.0%" /></p>
+</div>
+<div id="equalize-medians-normalization" class="section level5">
+<h5><span class="header-section-number">1.2.0.3.2</span> Equalize medians normalization</h5>
+<p>The default option for normalization is ‘equalizeMedians’, where all the
+intensities in a run are shifted by a constant, to equalize the median of intensities across runs for
+label-free experiment. This normalization method is appropriate <strong>when we can assume that the
+majority of proteins do not change across runs</strong>. Be cautious when using the <code>equalizeMedians</code>
+option for a label-free DDA dataset with only a small number of proteins. For label based experiment,
+<code>equalizeMedians</code> equalizes the median of reference intensities across runs and is generally proper
+even for a dataset with a small number of proteins.</p>
+<pre class="sourceCode r"><code class="sourceCode r">srm.equalmed &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(SRMRawData, <span class="dt">normalization =</span> <span class="st">&#39;equalizeMedians&#39;</span>)
+<span class="kw">dataProcessPlots</span>(srm.equalmed, <span class="dt">type=</span><span class="st">&#39;QCplot&#39;</span>, <span class="dt">address=</span><span class="st">&#39;srm_equalM_&#39;</span>)</code></pre>
+<p><img src="img/srm_equalM_QCPlot.png" style="width:50.0%" /></p>
+</div>
+<div id="quantile-normalization" class="section level5">
+<h5><span class="header-section-number">1.2.0.3.3</span> Quantile normalization</h5>
+<p>The distribution of all the intensities in each run will become the same across runs for
+label-free experiment. For label-based experiment, the distribution of all the reference intensities
+will be become the same across runs and all the endogenous intensities are shifted by a constant
+corresponding to reference intensities.</p>
+<pre class="sourceCode r"><code class="sourceCode r">srm.quantile &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(SRMRawData, <span class="dt">normalization=</span><span class="st">&#39;quantile&#39;</span>)
+<span class="kw">dataProcessPlots</span>(srm.quantile, <span class="dt">type=</span><span class="st">&#39;QCplot&#39;</span>, <span class="dt">address=</span><span class="st">&#39;srm_quantile_&#39;</span>)</code></pre>
+<p><img src="img/srm_quantile_QCPlot.png" style="width:50.0%" /></p>
+</div>
+<div id="global-standards-normalization-example-1" class="section level5">
+<h5><span class="header-section-number">1.2.0.3.4</span> Global standards normalization : example 1</h5>
+<p>If you have a spiked in standard across all MS runs, you may set this to <code>globalStandards</code> and define the standard with <code>nameStandards</code> option. Global standard peptide or Protein names, which you can assume that they have the same abundance across MS runs, should be assigned in the vector for this option.</p>
+<p>First, let’s assume that <code>PMG2</code> proteins is the spike-in protein and shoule be equal amount across MS runs.</p>
+<pre class="sourceCode r"><code class="sourceCode r">srm.global.pmg2 &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(SRMRawData, <span class="dt">normalization =</span><span class="st">&#39;globalStandards&#39;</span>,
+                               <span class="dt">nameStandards =</span> <span class="st">&#39;PMG2&#39;</span>)
+<span class="kw">dataProcessPlots</span>(srm.global.pmg2, <span class="dt">type=</span><span class="st">&#39;QCplot&#39;</span>, <span class="dt">address=</span><span class="st">&#39;srm_global_PMG2_&#39;</span>)</code></pre>
+<p><img src="img/srm_global_PMG2_QCPlot.png" style="width:50.0%" /></p>
+<p>Second, let’s assume that <code>IDHC</code> proteins is the spike-in protein and shoule be equal amount across MS runs.</p>
+</div>
+<div id="global-standards-normalization-example-2" class="section level5">
+<h5><span class="header-section-number">1.2.0.3.5</span> Global standards normalization : example 2</h5>
+<pre class="sourceCode r"><code class="sourceCode r">srm.global.idhc &lt;-<span class="st"> </span><span class="kw">dataProcess</span>(SRMRawData, <span class="dt">normalization =</span><span class="st">&#39;globalStandards&#39;</span>,
+                               <span class="dt">nameStandards =</span> <span class="st">&#39;IDHC&#39;</span>)
+<span class="kw">dataProcessPlots</span>(srm.global.idhc, <span class="dt">type=</span><span class="st">&#39;QCplot&#39;</span>, <span class="dt">address=</span><span class="st">&#39;srm_global_IDHC_&#39;</span>)</code></pre>
+<p><img src="img/srm_global_IDHC_QCPlot.png" style="width:50.0%" /></p>
+<hr />
+</div>
+</div>
+<div id="group-comparison-to-find-differentially-abundant-proteins-across-conditions" class="section level4">
+<h4><span class="header-section-number">1.2.0.4</span> Group comparison to find differentially abundant proteins across conditions</h4>
+<p><img src="img/MSstats_groupComparison.png" style="width:90.0%" /></p>
+<p>After we normalized the data and summarized each protein’s behaviour across conditions in <code>dataProcess</code> step, we are all set to compare protein changes between groups of conditions. Within MSstats we can do this with the <code>groupComparison</code> function, which takes as input the output of the <code>dataProcess</code> function.</p>
+<pre class="sourceCode r"><code class="sourceCode r">?groupComparison</code></pre>
+<div id="assign-contrast-matrix" class="section level5">
+<h5><span class="header-section-number">1.2.0.4.1</span> Assign contrast matrix</h5>
+<p>We have to tell <code>groupComparison</code> which are the conditions we would like to compare.
+You can make your <code>contrast.matrix</code> in R in a text editor. We define our contrast matrix by adding a column for every condition, <strong>in alphabetical order</strong>. We add a row for every comparison we would like to make between groups of conditions.</p>
+<p><strong>0</strong> is for conditions we would like to ignore.
+<strong>1</strong> is for conditions we would like to put in the numerator of the ratio or fold-change.
+<strong>-1</strong> is for conditions we would like to put in the denumerator of the ratio or fold-change.</p>
+<p>This part is a bit confusing, but it is absolutely critical! If the contrast matrix is set up incorrectly, our data will not be analyzed correctly. Our data has two groups, Diseased and Healthy. It’s common to place the experimental group over the control group, so that changes are “upregulated/downregulated” in the experimental group.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># check unique conditions and check order of condition information</span>
+<span class="kw">levels</span>(quant_tmp<span class="op">$</span>ProcessedData<span class="op">$</span>GROUP_ORIGINAL)</code></pre>
+<pre><code>## [1] &quot;Diseased&quot; &quot;Healthy&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create a contrast matrix for Diseased vs Healthy</span>
+comparison &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">-1</span>), <span class="dt">nrow=</span><span class="dv">1</span>)
+<span class="kw">row.names</span>(comparison) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Diseased-Healthy&quot;</span>)
+comparison</code></pre>
+<pre><code>##                  [,1] [,2]
+## Diseased-Healthy    1   -1</code></pre>
+</div>
+<div id="comparing-conditions-with-groupcomparison" class="section level5">
+<h5><span class="header-section-number">1.2.0.4.2</span> Comparing conditions with <code>groupComparison</code></h5>
+<p><code>groupComparison</code> uses the run-level summarized data (<code>$RunlevelData</code> from <code>dataProcess</code> function) for hypothesis testing. Now that we have our contrast matrix, we can feed it to the contrast.matrix parameter of the groupComparison function.</p>
+<pre class="sourceCode r"><code class="sourceCode r">gpcomp_tmp &lt;-<span class="st"> </span><span class="kw">groupComparison</span>(<span class="dt">contrast.matrix =</span> comparison, <span class="dt">data =</span> quant_tmp)</code></pre>
+<pre><code>## 
+  |                                                                       
+  |                                                                 |   0%
+  |                                                                       
+  |=                                                                |   2%
+  |                                                                       
+  |===                                                              |   4%
+  |                                                                       
+  |====                                                             |   6%
+  |                                                                       
+  |=====                                                            |   8%
+  |                                                                       
+  |=======                                                          |  10%
+  |                                                                       
+  |========                                                         |  12%
+  |                                                                       
+  |=========                                                        |  15%
+  |                                                                       
+  |===========                                                      |  17%
+  |                                                                       
+  |============                                                     |  19%
+  |                                                                       
+  |==============                                                   |  21%
+  |                                                                       
+  |===============                                                  |  23%
+  |                                                                       
+  |================                                                 |  25%
+  |                                                                       
+  |==================                                               |  27%
+  |                                                                       
+  |===================                                              |  29%
+  |                                                                       
+  |====================                                             |  31%
+  |                                                                       
+  |======================                                           |  33%
+  |                                                                       
+  |=======================                                          |  35%
+  |                                                                       
+  |========================                                         |  38%
+  |                                                                       
+  |==========================                                       |  40%
+  |                                                                       
+  |===========================                                      |  42%
+  |                                                                       
+  |============================                                     |  44%
+  |                                                                       
+  |==============================                                   |  46%
+  |                                                                       
+  |===============================                                  |  48%
+  |                                                                       
+  |================================                                 |  50%
+  |                                                                       
+  |==================================                               |  52%
+  |                                                                       
+  |===================================                              |  54%
+  |                                                                       
+  |=====================================                            |  56%
+  |                                                                       
+  |======================================                           |  58%
+  |                                                                       
+  |=======================================                          |  60%
+  |                                                                       
+  |=========================================                        |  62%
+  |                                                                       
+  |==========================================                       |  65%
+  |                                                                       
+  |===========================================                      |  67%
+  |                                                                       
+  |=============================================                    |  69%
+  |                                                                       
+  |==============================================                   |  71%
+  |                                                                       
+  |===============================================                  |  73%
+  |                                                                       
+  |=================================================                |  75%
+  |                                                                       
+  |==================================================               |  77%
+  |                                                                       
+  |===================================================              |  79%
+  |                                                                       
+  |=====================================================            |  81%
+  |                                                                       
+  |======================================================           |  83%
+  |                                                                       
+  |========================================================         |  85%
+  |                                                                       
+  |=========================================================        |  88%
+  |                                                                       
+  |==========================================================       |  90%
+  |                                                                       
+  |============================================================     |  92%
+  |                                                                       
+  |=============================================================    |  94%
+  |                                                                       
+  |==============================================================   |  96%
+  |                                                                       
+  |================================================================ |  98%
+  |                                                                       
+  |=================================================================| 100%</code></pre>
+<p>Let’s check the output.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(gpcomp_tmp)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(gpcomp_tmp)</code></pre>
+<pre><code>## [1] &quot;ComparisonResult&quot; &quot;ModelQC&quot;          &quot;fittedmodel&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Show test result</span>
+<span class="co"># Label : which comparison is used</span>
+<span class="co"># log2FC : estimated log2 fold change between Diseased and Healthy</span>
+<span class="co"># adj.pvalue : adjusted p value</span>
+<span class="co"># issue : detect whether this protein has any issue for comparison</span>
+<span class="co">#    such as, there is measurement in certain group, or no measurement at all.</span>
+<span class="co"># MissingPercentage : the number of missing intensities/total number of intensities </span>
+<span class="co">#     in conditions your are interested in for comparison</span>
+<span class="co"># ImputationPercentage : the number of imputed intensities/total number of intensities </span>
+<span class="co">#     in conditions your are interested in for comparison</span>
+<span class="kw">head</span>(gpcomp_tmp<span class="op">$</span>ComparisonResult)</code></pre>
+<pre><code>##        Protein            Label     log2FC        SE    Tvalue DF
+## 1 NP_001007697 Diseased-Healthy -0.8336648 0.1587751 -5.250601 28
+## 2 NP_001008724 Diseased-Healthy  0.2536262 0.1374329  1.845454 28
+## 3 NP_001010968 Diseased-Healthy -0.2364582 0.1377050 -1.717136 28
+## 4 NP_001011908 Diseased-Healthy -0.5805380 0.2071939 -2.801907 28
+## 5 NP_001012027 Diseased-Healthy  0.4264091 0.1567340  2.720591 28
+## 6 NP_001013967 Diseased-Healthy -0.3841446 0.1812183 -2.119789 28
+##         pvalue   adj.pvalue issue MissingPercentage ImputationPercentage
+## 1 1.398222e-05 4.194665e-05    NA        0.00000000                    0
+## 2 7.557162e-02 8.847410e-02    NA        0.00170068                    0
+## 3 9.699793e-02 1.108548e-01    NA        0.20158730                    0
+## 4 9.113170e-03 1.325552e-02    NA        0.06107660                    0
+## 5 1.107302e-02 1.518585e-02    NA        0.00000000                    0
+## 6 4.302086e-02 5.434214e-02    NA        0.00000000                    0</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># After fitting linear model, residuals and fitted values can be shown.</span>
+<span class="kw">head</span>(gpcomp_tmp<span class="op">$</span>ModelQC)</code></pre>
+<pre><code>##    RUN      PROTEIN ABUNDANCE NumMeasuredFeature MissingPercentage
+## 1:   1 NP_001007697  12.80623                 12                 0
+## 2:   2 NP_001007697  13.39071                 12                 0
+## 3:   3 NP_001007697  13.11670                 12                 0
+## 4:   4 NP_001007697  12.18845                 12                 0
+## 5:   5 NP_001007697  12.33439                 12                 0
+## 6:   6 NP_001007697  12.24504                 12                 0
+##    more50missing NumImputedFeature    originalRUN GROUP GROUP_ORIGINAL
+## 1:         FALSE                 0 D_102_REP1.raw     1       Diseased
+## 2:         FALSE                 0 D_102_REP2.raw     1       Diseased
+## 3:         FALSE                 0 D_102_REP3.raw     1       Diseased
+## 4:         FALSE                 0 D_103_REP1.raw     1       Diseased
+## 5:         FALSE                 0 D_103_REP2.raw     1       Diseased
+## 6:         FALSE                 0 D_103_REP3.raw     1       Diseased
+##    SUBJECT_ORIGINAL SUBJECT_NESTED SUBJECT   residuals   fitted
+## 1:              102            1.1       1 -0.04146609 12.84769
+## 2:              102            1.1       1  0.54301574 12.84769
+## 3:              102            1.1       1  0.26900406 12.84769
+## 4:              103            1.2       2 -0.19024316 12.37869
+## 5:              103            1.2       2 -0.04429893 12.37869
+## 6:              103            1.2       2 -0.13364853 12.37869</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fitted model per protein</span>
+<span class="kw">head</span>(gpcomp_tmp<span class="op">$</span>fittedmodel)</code></pre>
+<pre><code>## [[1]]
+## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: ABUNDANCE ~ GROUP + (1 | SUBJECT)
+##    Data: data2
+## REML criterion at convergence: 43.9118
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  SUBJECT  (Intercept) 0.2208  
+##  Residual             0.3441  
+## Number of obs: 42, groups:  SUBJECT, 14
+## Fixed Effects:
+## (Intercept)       GROUP2  
+##     12.5303       0.8337  
+## 
+## [[2]]
+## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: ABUNDANCE ~ GROUP + (1 | SUBJECT)
+##    Data: data2
+## REML criterion at convergence: -29.6564
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  SUBJECT  (Intercept) 0.2508  
+##  Residual             0.0984  
+## Number of obs: 42, groups:  SUBJECT, 14
+## Fixed Effects:
+## (Intercept)       GROUP2  
+##     15.8949      -0.2536  
+## 
+## [[3]]
+## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: ABUNDANCE ~ GROUP + (1 | SUBJECT)
+##    Data: data2
+## REML criterion at convergence: 8.1204
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  SUBJECT  (Intercept) 0.2323  
+##  Residual             0.1930  
+## Number of obs: 42, groups:  SUBJECT, 14
+## Fixed Effects:
+## (Intercept)       GROUP2  
+##     14.5870       0.2365  
+## convergence code 0; 1 optimizer warnings; 0 lme4 warnings 
+## 
+## [[4]]
+## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: ABUNDANCE ~ GROUP + (1 | SUBJECT)
+##    Data: data2
+## REML criterion at convergence: -2.2351
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  SUBJECT  (Intercept) 0.3797  
+##  Residual             0.1347  
+## Number of obs: 42, groups:  SUBJECT, 14
+## Fixed Effects:
+## (Intercept)       GROUP2  
+##     13.7445       0.5805  
+## 
+## [[5]]
+## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: ABUNDANCE ~ GROUP + (1 | SUBJECT)
+##    Data: data2
+## REML criterion at convergence: 2.328
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  SUBJECT  (Intercept) 0.2774  
+##  Residual             0.1647  
+## Number of obs: 42, groups:  SUBJECT, 14
+## Fixed Effects:
+## (Intercept)       GROUP2  
+##     13.8510      -0.4264  
+## 
+## [[6]]
+## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: ABUNDANCE ~ GROUP + (1 | SUBJECT)
+##    Data: data2
+## REML criterion at convergence: -14.8569
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  SUBJECT  (Intercept) 0.3326  
+##  Residual             0.1138  
+## Number of obs: 42, groups:  SUBJECT, 14
+## Fixed Effects:
+## (Intercept)       GROUP2  
+##     15.2037       0.3841</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">gpcomp_tmp<span class="op">$</span>fittedmodel[[<span class="dv">1</span>]]</code></pre>
+<pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: ABUNDANCE ~ GROUP + (1 | SUBJECT)
+##    Data: data2
+## REML criterion at convergence: 43.9118
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  SUBJECT  (Intercept) 0.2208  
+##  Residual             0.3441  
+## Number of obs: 42, groups:  SUBJECT, 14
+## Fixed Effects:
+## (Intercept)       GROUP2  
+##     12.5303       0.8337</code></pre>
+<p>Show only the results for significant changes.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># pull just the results out of the whole group comparison output</span>
+gpcomp_res &lt;-<span class="st"> </span>gpcomp_tmp<span class="op">$</span>ComparisonResult
+
+<span class="co"># subset only proteins with adjusted p-value &lt; 0.05 and a FC &gt; 2^2</span>
+list_sig &lt;-<span class="st"> </span>gpcomp_res[gpcomp_res<span class="op">$</span>adj.pvalue <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span><span class="kw">abs</span>(gpcomp_res<span class="op">$</span>log2FC) <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span> , ]
+<span class="kw">head</span>(list_sig)</code></pre>
+<pre><code>##      Protein            Label    log2FC        SE     Tvalue DF
+## 14 NP_036714 Diseased-Healthy -5.243740 0.2812962 -18.641346 28
+## 18 NP_036828 Diseased-Healthy  3.657823 0.5514314   6.633323 28
+## 31 NP_150641 Diseased-Healthy -2.568541 0.2657715  -9.664474 28
+##          pvalue   adj.pvalue issue MissingPercentage ImputationPercentage
+## 14 0.000000e+00 0.000000e+00    NA       0.000000000                    0
+## 18 3.389228e-07 1.478936e-06    NA       0.000000000                    0
+## 31 2.033405e-10 2.440085e-09    NA       0.009157509                    0</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(list_sig)</code></pre>
+<pre><code>## [1] 3</code></pre>
+</div>
+<div id="save-the-comparison-result" class="section level5">
+<h5><span class="header-section-number">1.2.0.4.3</span> Save the comparison result</h5>
+<p>Let’s save the testing result as rdata and .csv file.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">save</span>(gpcomp_res, <span class="dt">file=</span><span class="st">&#39;gpcomp_res.rda&#39;</span>)
+<span class="kw">write.csv</span>(gpcomp_res, <span class="dt">file=</span><span class="st">&#39;testresult_wglobalstandNorm.csv&#39;</span>)</code></pre>
+<hr />
+</div>
+</div>
+<div id="visualization-of-differentially-abundant-proteins" class="section level4">
+<h4><span class="header-section-number">1.2.0.5</span> Visualization of differentially abundant proteins</h4>
+<pre class="sourceCode r"><code class="sourceCode r">?groupComparisonPlots</code></pre>
+<div id="volcano-plot" class="section level5">
+<h5><span class="header-section-number">1.2.0.5.1</span> Volcano plot</h5>
+<p>Volcano plot summarizes all the proteins with respect to their practical significance (log2 [fold change]) and statistical significance (-log10 [adjusted p-value]). Proteins with greater values on the y axis are more statistically significant. Changes with an adjusted p-value less than a significance level (default of 0.05) are considered as statistically significant. Up-regulated and down-regulated proteins are shown in red and blue, respectively.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">groupComparisonPlots</span>(<span class="dt">data =</span> gpcomp_tmp<span class="op">$</span>ComparisonResult, 
+                     <span class="dt">type =</span> <span class="st">&#39;VolcanoPlot&#39;</span>,
+                     <span class="dt">sig =</span> <span class="fl">0.05</span>, <span class="dt">FCcutoff =</span> <span class="dv">2</span><span class="op">^</span><span class="dv">2</span>, 
+                     <span class="dt">address =</span> <span class="st">&#39;MSstats_&#39;</span>)</code></pre>
+<p><img src="img/MSstats_VolcanoPlot.png" style="width:60.0%" /></p>
+</div>
+</div>
+<div id="heatmap" class="section level4">
+<h4><span class="header-section-number">1.2.0.6</span> Heatmap</h4>
+<p>Heatmaps are useful to visualize the results of multiple comparisons at once. In this tutorial, we only had one comparison (Diseased vs Healthy), but I’m leaving this code here so that you can recycle it if you do a multi-way comparison in the future!</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">groupComparisonPlots</span>(<span class="dt">data =</span> gpcomp_tmp<span class="op">$</span>ComparisonResult, 
+                     <span class="dt">type =</span> <span class="st">&#39;Heatmap&#39;</span>, 
+                     <span class="dt">address =</span> <span class="st">&#39;MSstats_&#39;</span>)</code></pre>
+</div>
+<div id="comparison-plot" class="section level4">
+<h4><span class="header-section-number">1.2.0.7</span> Comparison plot</h4>
+<p>Comparison plots illustrate model-based estimates of log-fold changes, and the associated
+uncertainty, in several comparisons of conditions for one protein. X-axis is the comparison of
+interest. Y-axis is the log fold change. The dots are the model-based estimates of log-fold
+change, and the error bars are the model-based 95% confidence intervals (the option sig can
+be used to change the significance level of significance). For simplicity, the confidence intervals
+are adjusted for multiple comparisons within protein only, using the Bonferroni approach. For
+proteins with N comparisons, the individual confidence intervals are at the level of 1-sig/N.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">groupComparisonPlots</span>(<span class="dt">data =</span> gpcomp_tmp<span class="op">$</span>ComparisonResult,
+                     <span class="dt">type =</span> <span class="st">&#39;ComparisonPlot&#39;</span>, 
+                     <span class="dt">address =</span> <span class="st">&#39;MSstats_&#39;</span>)</code></pre>
+<hr />
+</div>
+<div id="planning-future-experimental-designs" class="section level4">
+<h4><span class="header-section-number">1.2.0.8</span> Planning future experimental designs</h4>
+<p><img src="img/MSstats_workflow_design.png" style="width:90.0%" /></p>
+<p>This last analysis step views the dataset as a pilot study of a future experiment, utilizes its variance components, and calculates the minimal number of replicates required in a future
+experiment to achieve the desired statistical power. The calculation is performed by the function <code>designSampleSize</code>, which takes as input the fitted model in <code>groupComparison</code>. Sample size calculation assumes same experimental design (i.e. group comparison, time course or paired design) as in the current dataset, and uses the model fit to estimate the median variance components across all the proteins. Finally, sample size calculation assumes that a large proportion of proteins (specifically, 99%) will not change in abundance in the future experiment. This assumption also provides conservative results.
+Using the estimated variance components, the function relates the number of biological replicates per condition (<code>numSample</code>, rounded to 0 decimal), average statistical power across all the proteins (<code>power</code>), minimal fold change that we would like to detect (can be specified as a range, e.g. <code>desiredFC=c(1.1, 2)</code>), and the False Discovery Rate (<code>FDR</code>). The user should specify all these quantities but one, and the function will solve for the remainder. The quantity to solve for should be set to <code>= TRUE</code>.</p>
+<p>Above, when we made our volcano plot, we use 2^2 as the fold-change cut off, but that number is experiment-dependent! Some strongly-powered experiments can achieve fold-change sensitivities like 1.25, but other poorly-powered experiments may not be sensitive to even 5 FC.</p>
+<pre class="sourceCode r"><code class="sourceCode r">?designSampleSize</code></pre>
+<div id="designing-sample-size-for-desired-fold-change" class="section level5">
+<h5><span class="header-section-number">1.2.0.8.1</span> Designing sample size for desired fold-change</h5>
+<p>The designSampleSize function has three major parameters that can be manipulated to explore the range of samples, desired FC, or statistical power. It’s most common to fix the power at 0.8 or 0.9 to explore how varying the FC or sample size affects an experiment.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># calculate the number of samples to achieve a range of fold changes from 1.1-1.5, at a fixed 90% power</span>
+design_size &lt;-<span class="st"> </span><span class="kw">designSampleSize</span>(<span class="dt">data =</span> gpcomp_tmp<span class="op">$</span>fittedmodel,
+                                 <span class="dt">desiredFC =</span> <span class="kw">c</span>(<span class="fl">1.1</span>, <span class="fl">1.5</span>), <span class="dt">FDR =</span> <span class="fl">0.05</span>,
+                                 <span class="dt">power =</span> <span class="fl">0.9</span>,
+                                 <span class="dt">numSample =</span> <span class="ot">TRUE</span>)
+design_size</code></pre>
+<pre><code>##    desiredFC numSample  FDR power    CV
+## 1      1.100       221 0.05   0.9 0.001
+## 2      1.125       145 0.05   0.9 0.001
+## 3      1.150       103 0.05   0.9 0.002
+## 4      1.175        77 0.05   0.9 0.002
+## 5      1.200        60 0.05   0.9 0.003
+## 6      1.225        49 0.05   0.9 0.003
+## 7      1.250        40 0.05   0.9 0.004
+## 8      1.275        34 0.05   0.9 0.004
+## 9      1.300        29 0.05   0.9 0.005
+## 10     1.325        25 0.05   0.9 0.006
+## 11     1.350        22 0.05   0.9 0.006
+## 12     1.375        20 0.05   0.9 0.007
+## 13     1.400        18 0.05   0.9 0.007
+## 14     1.425        16 0.05   0.9 0.008
+## 15     1.450        15 0.05   0.9 0.008
+## 16     1.475        13 0.05   0.9 0.010
+## 17     1.500        12 0.05   0.9 0.010</code></pre>
+</div>
+<div id="visualize-the-relationship-between-desired-fold-change-and-mininum-sample-size-number" class="section level5">
+<h5><span class="header-section-number">1.2.0.8.2</span> Visualize the relationship between desired fold-change and mininum sample size number</h5>
+<p>The design_size output above can be visualized in a sample size plot for ease of interpretation. Notice the axis labels, and the information contained in this plot.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">designSampleSizePlots</span>(<span class="dt">data =</span> design_size)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+</div>
+<div id="calculating-statistical-power" class="section level5">
+<h5><span class="header-section-number">1.2.0.8.3</span> Calculating statistical power</h5>
+<p>Instead of calculating with a fixed statistical power, let’s consider an example where all our data for the experiment has been acquired, and we need to calculate what our statistical power is at various fold-change values. In our heart failure experiment, there were 7 Diseased and 7 Healthy animals, so 7 biological replicates.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># power calculation with 7 replicates</span>
+design_power &lt;-<span class="st"> </span><span class="kw">designSampleSize</span>(<span class="dt">data =</span> gpcomp_tmp<span class="op">$</span>fittedmodel, 
+                                 <span class="dt">desiredFC =</span> <span class="kw">c</span>(<span class="fl">1.1</span>, <span class="fl">1.5</span>), 
+                                 <span class="dt">FDR =</span> <span class="fl">0.05</span>, 
+                                 <span class="dt">power =</span> <span class="ot">TRUE</span>, 
+                                 <span class="dt">numSample =</span> <span class="dv">7</span>) 
+design_power</code></pre>
+<pre><code>##    desiredFC numSample  FDR power    CV
+## 1      1.100         7 0.05  0.01 0.024
+## 2      1.125         7 0.05  0.01 0.023
+## 3      1.150         7 0.05  0.01 0.023
+## 4      1.175         7 0.05  0.01 0.022
+## 5      1.200         7 0.05  0.01 0.022
+## 6      1.225         7 0.05  0.01 0.021
+## 7      1.250         7 0.05  0.01 0.021
+## 8      1.275         7 0.05  0.01 0.020
+## 9      1.300         7 0.05  0.02 0.020
+## 10     1.325         7 0.05  0.04 0.020
+## 11     1.350         7 0.05  0.08 0.019
+## 12     1.375         7 0.05  0.13 0.019
+## 13     1.400         7 0.05  0.19 0.019
+## 14     1.425         7 0.05  0.26 0.018
+## 15     1.450         7 0.05  0.33 0.018
+## 16     1.475         7 0.05  0.41 0.018
+## 17     1.500         7 0.05  0.48 0.017</code></pre>
+</div>
+<div id="visualize-the-relationship-between-desired-fold-change-and-power" class="section level5">
+<h5><span class="header-section-number">1.2.0.8.4</span> Visualize the relationship between desired fold-change and power</h5>
+<p>Again, we can plot the matrix of numbers stored in the design_power variable to get a more easily interpretable representation of the data.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">designSampleSizePlots</span>(<span class="dt">data =</span> design_power)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<hr />
+</div>
+</div>
+<div id="protein-subject-quantification" class="section level4">
+<h4><span class="header-section-number">1.2.0.9</span> Protein subject quantification</h4>
+<p>With the summarized protein abundance, you can apply clustering and/or classification techniques to perform downstream analysis. If there is no technical replicate, subject (or sample) quantification should be the same as run-level summarization (quant_tmp$RunlevelData). However, our heart failure experiment used technical triplicate for each of the biological replicates, so we the subject-level summarization (quantification) with run-level summarization will be useful for downstream analysis, such as classification.</p>
+<p><img src="img/MSstats_workflow_quantification.png" style="width:90.0%" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">?quantification</code></pre>
+<p>To perform the quantification for each condition, we simply supply our <strong>quant_tmp</strong> variable as the input, and here we’ll save the result in a new variable, <strong>sampleQuant</strong>. You can explore the <strong>sampleQuant</strong> data the same way we explored other data above.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">## sample quantification : estimated protein abundance per biological replicate</span>
+sampleQuant &lt;-<span class="st"> </span><span class="kw">quantification</span>(quant_tmp)
+<span class="kw">head</span>(sampleQuant)</code></pre>
+<pre><code>##        Protein Diseased_102 Diseased_103 Diseased_108 Diseased_138
+## 1 NP_001007697     13.11670     12.24504     12.62943     12.17727
+## 2 NP_001008724     16.12783     15.72596     15.83643     15.64176
+## 3 NP_001010968     14.69073     14.51685     14.75055     14.51171
+## 4 NP_001011908     12.86150     14.10219     14.00146     13.93043
+## 5 NP_001012027     14.36359     13.42129     13.38806     13.97415
+## 6 NP_001013967     15.28486     15.18118     15.15666     15.81058
+##   Diseased_154 Diseased_172 Diseased_196 Healthy_146 Healthy_147
+## 1     12.63568     12.75957     12.65846    13.07605    12.99485
+## 2     16.16695     15.84984     16.04258    15.68226    15.47625
+## 3     15.30123     14.24985     14.18392    14.96027    14.49220
+## 4     14.09568     14.10892     13.10736    14.60360    14.43814
+## 5     14.18741     13.70413     13.79411    13.47386    12.98094
+## 6     14.90268     15.51735     14.62367    15.70800    14.97041
+##   Healthy_148 Healthy_159 Healthy_160 Healthy_161 Healthy_162
+## 1    13.19913    14.04278    13.65691    13.48622    13.49249
+## 2    16.20094    15.88184    15.48883    15.28579    15.48859
+## 3    14.79855    14.94489    14.81125    14.81254    14.97455
+## 4    14.07497    14.30102    14.49728    14.21577    14.11472
+## 5    13.62825    13.52809    13.26273    13.31545    13.60441
+## 6    15.54271    15.46914    15.72900    15.63306    15.88452</code></pre>
+<hr />
+</div>
+<div id="tracking-the-whole-process" class="section level4">
+<h4><span class="header-section-number">1.2.0.10</span> Tracking the whole process</h4>
+<p>When running MSstats, <strong>msstats.log</strong> and <strong>sessionInfo.txt</strong> are automatically generated. These two files are important to keep the records of package versions and options in functions.
+To help troubleshoot potential problems with installation or functionalities of MSstats, a progress report is generated in a log file msstats.log. The file includes information on the R session (R version, loaded software libraries), options selected by the user, checks of successful completion of intermediate analysis steps, and warning messages. If the analysis produces an error, the file contains suggestions for possible reasons for the errors. If a file with this name already exists in working directory, a suffix with a number will be appended to the file name.</p>
+<p><img src="img/logfileexample.png" style="width:90.0%" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/uw2019-msstats.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
